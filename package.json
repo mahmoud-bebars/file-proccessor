@@ -1,0 +1,21 @@
+{
+  "name": "photo-upload-project",
+  "version": "1.0.0",
+  "description": "explore the basic usage of Express-FileUpload. In addition to this, I will show you how you can save/update a user record with a profile image that you can upload.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "m.bebars",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-handlebars": "^5.3.3",
+    "mysql2": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

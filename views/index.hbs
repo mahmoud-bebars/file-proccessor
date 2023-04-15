@@ -1,0 +1,54 @@
+<div class="mb-3">
+  <form action="/" method="POST" enctype="multipart/form-data">
+    <label for="formFile" class="form-label">upload profile photo</label>
+    <input
+      class="form-control mb-3"
+      type="file"
+      name="sampleFile"
+      accept="image/"
+    />
+    <div class="d-grid gap-2">
+      <input type="submit" class="btn btn-primary" />
+    </div>
+
+  </form>
+</div>
+
+<div class="card w-100">
+
+  {{#each rows}}
+
+    <div class="row g-0">
+      <div class="col-md-4">
+        <div class="text-center">
+          {{#if this.profileImage}}
+            <img
+              src="{{this.profileImage}}"
+              class="img-fluid rounded-circle border border-primary border-3 m-3"
+              width="200"
+              height="200"
+              alt="User Profile"
+            />
+          {{else}}
+            <img
+              src="/img/default.jpg"
+              class="img-fluid rounded-circle border border-primary border-3 m-3"
+              width="200"
+              height="200"
+              alt="User Profile"
+            />
+          {{/if}}
+
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{this.name}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{this.jobTitle}}</h6>
+          <p class="card-text">{{this.description}}</p>
+          <a href="#" class="btn btn-primary">View profile</a>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
